@@ -4,8 +4,9 @@
   <title>Welcome To Anything Tech IT Solutions</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="images/icon.png"/>
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" type="image/png" href="images/logo.png"/>
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
@@ -14,249 +15,255 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
   <style>
-  body { 
-    position: relative; 
-  }     
+    body { 
+      position: relative; 
+    }     
 
-  .navbar-toggler {
-    border-color: rgb(0,51,102,8);   
-  }  
+    .navbar-toggler {
+      border-color: #036;   
+    }  
 
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(51,204,204, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 153, 9, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
 
-  #top-nav ul {
-    margin-top: 10px;   
-  }
-      
-  #top-nav ul li {
-    padding: 7px 8px;
-  }
+    #top-nav ul {
+      margin-top: 10px;   
+    }
 
-  #top-nav ul li:hover a {
-    border-bottom: 2px solid #cc9900;
-  }
+    #top-nav ul li {
+      padding: 7px 8px;
+    }
 
-  #top-nav .navbar-nav a {
-    color: #036;
-    font: 13px Roboto, Arial, sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
+    #top-nav ul li:hover a {
+      border-bottom: 2px solid #ff9909;
+    }
 
-  .navbar li .active {
-    border-bottom: 2px solid #c9900c;
-  }
+    #top-nav .navbar-nav a {
+      color: #036;
+      font: 13px Roboto, Arial, sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
 
-  .navbar li a .active {
-    font-weight: bolder;
-  }
+    .navbar li .active {
+      border-bottom: 2px solid #ff9909;
+    }
 
-  .navbar #contact-btn  {
-    color: #036; 
-    border: 2px solid #cc9900; 
-    border-radius: 15px; 
-    font-weight: bold; 
-    padding: 7px 20px;
-  }
+    .navbar li a .active {
+      font-weight: bolder;
+    }
 
-  .navbar #contact-btn:hover {
-    background: #036;
-    color: #fff;
-  }
+    .navbar #contact-btn  {
+      color: #036; 
+      border: 2px solid #ff9909; 
+      border-radius: 15px; 
+      font-weight: bold; 
+      padding: 7px 20px;
+    }
 
-  .main-carousel .iconify {
-    color: #00ff00;
-    font-weight: bolder;
-  }
+    .navbar #contact-btn:hover {
+      background: #036;
+      color: #fff;
+    }
 
-  .main-carousel h1 {
-    font-size: 40px; 
-    font-weight: 1000;
-  }
+    .main-carousel .iconify {
+      color: #ff9909;
+      font-weight: bolder;
+    }
 
-  .main-carousel ul {
-    padding-left: 5px;
-  }
-
-  .main-carousel ul li {
-    list-style-type: none;
-    line-height: 35px;
-    font-size: 19px;
-  }
-
-  @media only screen and (max-width: 1200px){
     .main-carousel h1 {
-      font-size: 25px;
-      font-weight: 700px;
+      font-size: 40px; 
+      font-weight: 1000;
     }
+
+    .main-carousel ul {
+      padding-left: 5px;
+    }
+
     .main-carousel ul li {
-      font-size: 18px;
+      list-style-type: none;
+      line-height: 35px;
+      font-size: 19px;
     }
-  }
 
-  @media only screen and (max-width: 900px){
-    .main-carousel ul li {
-      font-size: 15px;
+    @media only screen and (max-width: 1200px){
+      .main-carousel h1 {
+        font-size: 25px;
+        font-weight: 700px;
+      }
+      .main-carousel ul li {
+        font-size: 18px;
+      }
     }
-  }
 
-  .main-carousel .btn {
-    background: #cc9900;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    color: #036;
-    font-weight: bold;
-    padding: 5px 30px;
-  }
-  .main-carousel .btn:hover {
-    transform: scale(1.1);
-    transition: ease-in-out .6s;
-  }
+    @media only screen and (max-width: 900px){
+      .main-carousel ul li {
+        font-size: 15px;
+      }
+    }
 
-  .carousel-img {
-    animation-name: carousel-img; animation-duration: 4s; animation-iteration-count: infinite;
-  }
+    .main-carousel .btn {
+      background: #ff9909;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      color: #036;
+      font-weight: bold;
+      padding: 5px 30px;
+    }
+    .main-carousel .btn:hover {
+      transform: scale(1.1);
+      transition: ease-in-out .6s;
+    }
 
-  @keyframes carousel-img {
-    0% {transform: translateY(0);}
-    40% {transform: translateY(-10px);}
-    //60% {transform: translateY(0);}
-    80% {transform: translateY(0);}  
-    100% {transform: translateY(0);}
-  }
+    .carousel-img {
+      animation-name: carousel-img; animation-duration: 4s; animation-iteration-count: infinite;
+    }
 
-  .about {
-    background: rgba(230,247,255,1);
-    margin-top: -160px;
-  }
+    @keyframes carousel-img {
+      0% {transform: translateY(0);}
+      40% {transform: translateY(-10px);}
+      //60% {transform: translateY(0);}
+      80% {transform: translateY(0);}  
+      100% {transform: translateY(0);}
+    }
 
-  .about h2 {
-    color: #444; 
-    font-size: 35px; 
-    font-weight: bolder;
-  }
-
-  @media only screen and (max-width: 1500px){
     .about {
-      margin-top: -120px; 
+      background: rgba(230,247,255,1);
+      margin-top: -160px;
     }
-  }
 
-  @media only screen and (max-width: 1000px){
-    .about {
-      margin-top: -50px; 
-    }
-  }
-
-  @media only screen and (max-width: 770px){
-    .about {
-      margin-top: -20px; 
-    }
     .about h2 {
-      font-size: 25px; 
+      color: #444; 
+      font-size: 35px; 
+      font-weight: bolder;
     }
-  }
 
-  .services .btn {
-    background: #fff;
-    border: 2px solid #036;
-    border-radius: 15px;
-    color: rgb(102,0,255);
-    font-weight: bold;
-    padding: 3px 25px;
-  }
-
-  .services .btn:hover {
-    border: 2px solid rgb(102,0,255);
-    color: #036;
-    transform: scale(1.1);
-    transition: ease-in-out .6s;
-  }
-
-  .services .btn:hover .arrow1 {
-    animation-name: arrow; 
-    animation-duration: 1s; 
-    animation-iteration-count: infinite;
-  }
-
-  .services .btn:hover .arrow2 {
-    animation-name: arrow; 
-    animation-duration: 1s; 
-    animation-iteration-count: infinite;
-  }
-
-  .services .btn:hover .arrow3 {
-    animation-name: arrow; 
-    animation-duration: 1s; 
-    animation-iteration-count: infinite;
-  }
-
-  .services .btn:hover .arrow4 {
-    animation-name: arrow; 
-    animation-duration: 1s; 
-    animation-iteration-count: infinite;
-  }
-
-  @keyframes arrow {
-    0% {transform: translateX(0);}
-    50% {transform: translateX(8px);} 
-    100% {transform: translateX(0);}
-  }
-
-  .services .col-sm-6 {
-    margin-bottom: 50px;
-  }
-
-  .work ul li {
-    list-style-type: none;
-    font-size: 17px;
-    line-height: 35px;
-  }
-
-  .work i {
-    color: #00b300;
-  }
-
-  @media only screen and (max-width: 1000px){
-    .work .row {
-      display: block;
+    .about .iconify {
+      color: #ff9909;
+      font-size: 70px;
+      animation-delay: .2s;
     }
-    .col-sm-4 div {
-      width: 100%;
+
+    @media only screen and (max-width: 1500px){
+      .about {
+        margin-top: -120px; 
+      }
     }
-  }
 
-  .bottom-nav ul li a {
-    color: #fff;
-    font-size: 15px;
-    line-height: 30px;
-  }
-
-  .details, .details a {
-    color: #fff;
-    line-height: 20px;
-  }
-
-  @media only screen and (max-width: 750px){
-    .hide-at-700px {
-      display: none;
+    @media only screen and (max-width: 1000px){
+      .about {
+        margin-top: -50px; 
+      }
     }
-  }
-</style>
+
+    @media only screen and (max-width: 770px){
+      .about {
+        margin-top: -20px; 
+      }
+      .about h2 {
+        font-size: 25px; 
+      }
+    }
+
+    .services .btn {
+      background: #fff;
+      border: 2px solid #036;
+      border-radius: 15px;
+      color: rgb(102,0,255);
+      font-weight: bold;
+      padding: 3px 25px;
+    }
+
+    .services .btn:hover {
+      border: 2px solid rgb(102,0,255);
+      color: #036;
+      transform: scale(1.1);
+      transition: ease-in-out .6s;
+    }
+
+    .services .btn:hover .arrow1 {
+      animation-name: arrow; 
+      animation-duration: 1s; 
+      animation-iteration-count: infinite;
+    }
+
+    .services .btn:hover .arrow2 {
+      animation-name: arrow; 
+      animation-duration: 1s; 
+      animation-iteration-count: infinite;
+    }
+
+    .services .btn:hover .arrow3 {
+      animation-name: arrow; 
+      animation-duration: 1s; 
+      animation-iteration-count: infinite;
+    }
+
+    .services .btn:hover .arrow4 {
+      animation-name: arrow; 
+      animation-duration: 1s; 
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes arrow {
+      0% {transform: translateX(0);}
+      50% {transform: translateX(8px);} 
+      100% {transform: translateX(0);}
+    }
+
+    .services .col-sm-6 {
+      margin-bottom: 50px;
+    }
+
+    .work ul li {
+      list-style-type: none;
+      font-size: 17px;
+      line-height: 35px;
+    }
+
+    .work i {
+      color: #00b300;
+    }
+
+    @media only screen and (max-width: 1000px){
+      .work .row {
+        display: block;
+      }
+      .col-sm-4 div {
+        width: 100%;
+      }
+    }
+
+    .bottom-nav ul li a {
+      color: #fff;
+      font-size: 15px;
+      line-height: 30px;
+    }
+
+    .details, .details a {
+      color: #fff;
+      line-height: 20px;
+    }
+
+    @media only screen and (max-width: 750px){
+      .hide-at-700px {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="250">
   <div id="home"></div>
   <nav class="navbar navbar-expand-lg fixed-top" id="top-nav" style="background: #99caff; //border-bottom: 1px solid rgba(102,0,255,0.2);">
     <div class="container">
-      <a class="navbar-brand" href="#" style="display: flex; line-height: 21px; margin-top: 15px;">
-        <img src="images/logo.png" class="img-fluid" width="85px" style="margin-top: -16px; margin-right: 8px;"> 
+      <a class="navbar-brand" href="#" style="display: flex; line-height: 21px; margin-top: 25px;">
+        <img src="images/logo.png" class="img-fluid" width="65px" style="margin-top: -16px; margin-right: 8px;"> 
         <div class="" style="margin-top: 5px;">
-          <span style="color: #fff; font-size: 30px; font-weight: bolder;">Anything</span>
-          <span style="color: rgb(51,204,204);font-size: 30px; font-weight: bolder; margin-left: -5px;">Tech</span>
+          <span style="color: #036; font-size: 30px; font-weight: bolder;">Ultimate</span>
+          <span style="color: #ff9909; font-size: 30px; font-weight: bolder; margin-left: -5px;">TS</span>
           <br>
-          <span style="color: #b3b3b3; font-size: 15px; text-transform: uppercase; letter-spacing: 2px;">Info-tech Solutions</span>
+          <span style="color: #808080; font-size: 15px; font-weight: bold; text-transform: uppercase;">Financial Services</span>
         </div>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -271,13 +278,13 @@
             <a id="about-btn" class="nav-link" href="#about">About Us</a>
           </li>
           <li class="nav-item">
-            <a id="services-btn" class="nav-link" href="#services">Services</a>
+            <a id="services-btn" class="nav-link" href="#services">Payment terms</a>
           </li>
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link" href="blog/index.html">Tech Blog</a>
-          </li>
+          </li>-->
           <li class="nav-item">
-            <a id="contact-btn" class="nav-link btn btn-sm" href="#contact">Get In Touch</a>
+            <a id="contact-btn" class="nav-link btn btn-sm" href="#contact">Get Started</a>
           </li>
         </ul>
       </div>
@@ -290,7 +297,7 @@
           <h1 class="animatable fadeInUp">Ultimate TS Financial Solutions</h1>
           <h3 class="animatable fadeInUp">A Gateway To Financial Freedom</h3>
           <br>
-          <p class="animatable fadeInUp" style="color: #036;">We help you to achieve more by giving you small loans with easy terms!</p>
+          <p class="animatable fadeInUp" style="color: #036;">We help you to achieve more by giving you salary loans with easy terms!</p>
           <br>
           <div class="button-container animatable fadeInUp">
             <a class="" id="contact-btn2" href="#contact"><button class="btn">Get Started Today</button></a>
@@ -298,7 +305,7 @@
         </div>
         <div class="col-sm-5" style="position: relative;">
           <img src="images/tech.png" alt="" class="img-fluid img0">
-          <img src="images/unifi.png" alt="Wifi Equipment" class="img-fluid carousel-img" style="z-index: 2; margin-top: 20%; margin-left: 25px; filter: contrast(110%);">
+          <img src="images/update.png" alt="Wifi Equipment" class="img-fluid carousel-img" style="z-index: 2; margin-top: 2%; margin-left: 25px; filter: contrast(110%);">
         </div>
       </div>
     </div>
@@ -308,108 +315,77 @@
   </div>
   <div class="container-fluid about" id="about">
     <div class="container">
-      <h2 class="text-center"><span style="color: #036;">About</span> AnythingTech IT Solutions</h2>
-      <br>
-      <p style="font-size: 18px;">AnythingTech IT Solutions offers great and diverse tech services to exceed our clients' expectations. Our services are custom tailored to meet our customers' unique needs. Our team of dedicated experts delivers quality work, strictly following industry guidelines. We offer affordable and quality service in; Website Design and Development, WiFi Network Installations, Computer Repairs and IT Support and CCTV Surveillance and Access Control Installations.</p>
+      <div class="row">
+        <div class="col-sm-4 text-center">
+          <span class="iconify animatable zoomIn" data-icon="fa-solid:handshake"></span>
+          <p style="color: #036; font-size: 20px; margin-top: 30px;" class="animatable fadeInUp">Higher acceptance rate</p>
+        </div>
+        <div class="col-sm-4 text-center">
+          <span class="iconify animatable zoomIn" data-icon="vaadin:piggy-bank-coin" data-inline="false"></span>
+          <p style="color: #036; font-size: 20px; margin-top: 30px;" class="animatable fadeInUp">More affordable</p>
+        </div>
+        <div class="col-sm-4 text-center">
+          <span class="iconify animatable zoomIn" data-icon="emojione-monotone:money-bag"></span>
+          <p style="color: #036; font-size: 20px; margin-top: 30px;" class="animatable fadeInUp">Easier repayments</p>
+        </div>
+      </div>
       <br>
       <br>
     </div>
   </div>
   <div class="jumbotron services" id="services" style="border-radius: 0; background: #fff; margin-bottom: 0;">
     <div class="container">
-      <h3 class="text-center" style="color: #444; font-size: 35px; font-weight: bolder;">AnythingTech IT Solutions <span style="color: #036;">Services</span></h3>
-      <!--<p class="text-center" style="font-size: 18px;">Impress your customers and grow your business for less! Choose from our great and affordable packages below.</p>-->
+      <h2 class="text-center animatable fadeInUp"><span style="color: #ff9909; margin-top: 50px;">About</span> Ultimate TS Financial Services</h2>
+      <br>
+      <p class="animatable fadeInUp" style="font-size: 18px;">We are an online financial services company. We provide affordable loans against your salary. We offer a minimum loan amount from R500 to R5000. Once off service Fee is R70. Initiation fee is R150.</p>
+      <p class="animatable fadeInUp" style="font-size: 18px;">With higher acceptance than traditional lenders and repayments taken directly from your paycheck, Salary Finance makes borrowing the money you need easier than ever.</p>
       <br>
       <br>
-      Higher acceptance rate
-Taking repayments directly from your paycheck allows us to approve a wider range of borrowers than most lenders.
-
-More affordable
-We offer loans of up to $35,000 with low fixed interest rates from 5.9% - 19.9% annual percentage rate (APR).**
-
-Easier repayments
-By taking repayments directly from your paycheck, you never have to worry about missing a payment
+    </div>
+  </div>
+  <div class="container-fluid work" id="work" style="background: rgba(230,247,255,1); padding-top: 50px; padding-bottom: 70px;">
+    <br>
+    <div class="container">
       <div class="row">
+        <div class="col-md-4" style="">
+          <div style="margin-top: 50px;">
+            <img src="images/intro-financial.svg" class="img-fluid" style="width: 100%;">
+          </div>
+        </div>  
+        <div class="col-sm-8" style="padding-left: 50px;">
+          <br>
+          <h2 class="animatable fadeInUp" style="color: #036;">Payment Terms</h2>
+          <br>
+          <ul style="padding-left: 0;">
+          <li class="animatable fadeInUp" style="animation-delay: .3s"> &nbsp;<span style="color: #ff9909; font-size: 25px;" class="iconify" data-icon="fa-regular:credit-card"></span> &nbsp; Collection all payments are done via debit order.</li>
+          <li class="animatable fadeInUp" style="animation-delay: .9s"><span style="color: #ff9909; font-size: 40px;" class="iconify" data-icon="ic:baseline-calendar-month"></span> &nbsp; One month circle for repayment plus 30% interest.</li>
+        </ul>
         <br>
-        <div class="col-sm-6">
-          <div class="well animatable zoomIn">
-            <div class="text-center animatable fadeInUp" style="color: #036; font-size: 60px; animation-delay: .8s;"><span class="iconify" data-icon="fa-solid:laptop-code" data-inline="false"></span></div>
-            <br>
-            <h4 class="text-center animatable fadeInUp" style="color: #404040; font-weight: bold; animation-delay: .8s;">Website Design & Development</h4>
-            <p class="animatable fadeInUp" style="color: #808080; font-size: 16px; line-height: 25px; animation-delay: .8s;">We offer website designing Services at affordable prices. Our websites are hand crafted to perfection and customized to your needs. We help small businesses get a better return from online activities. We provide small to medium-sized businesses with a full range of Web Design Services including Web Designing, Web Development, Logo Designing and SEO Services.</p>
-            <div class="text-center">
-              <a class="btn btn-sm" href="web-design.html">Learn More <span class="iconify arrow1" data-icon="akar-icons:arrow-right" data-inline="false"></span></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="well animatable zoomIn">
-            <div class="text-center animatable fadeInUp" style="font-size: 60px; color: #036; animation-delay: .8s;"><span class="iconify" data-icon="fluent:wifi-protected-24-regular" data-inline="false"></span></div>
-            <br>
-            <h4 class="text-center animatable fadeInUp" style="color: #404040; font-weight: bold; animation-delay: .8s;">WiFi Network Installations</h4>
-            <p class="animatable fadeInUp" style="color: #808080; font-size: 16px; line-height: 25px; animation-delay: .8s;">We provide quality Wifi (802.11ac) installation services in Gauteng, for both home and office, public areas (like malls and restaurants) and outside places. We install top of the range Wireless Access Points from Ubiquiti which provides a very wide range coverage. Our well trained team can also do Wifi repairs, configurations and optimising on existing Wifi infrastucture.</p>
-            <div class="text-center">
-              <a class="btn btn-sm" href="networking.html">Learn More <span class="iconify arrow2" data-icon="akar-icons:arrow-right" data-inline="false"></span></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="well animatable zoomIn">
-            <div class="text-center animatable fadeInUp" style="color: #036; font-size: 60px; animation-delay: .8s;"><span class="iconify" data-icon="fluent:desktop-pulse-32-filled" data-inline="false"></span></div>
-            <br>
-            <h4 class="text-center animatable fadeInUp" style="color: #404040; font-weight: bold; animation-delay: .8s;">Computer Repairs & IT Support </h4>
-            <p class="animatable fadeInUp" style="color: #808080; font-size: 16px; line-height: 25px; animation-delay: .8s;">The most frustrating thing is failure to switch on your laptop or desktop computer on a Monday and you have loads of work to do. Well, don't panic. Our team of qualified IT technicians are trained to fix any computer fault, hardware or software. We offer online tech support for software problems or we can send a technician to come and assess the fault and provide necessary help at your office or home.</p>
-            <div class="text-center">
-              <a class="btn btn-sm" href="computer-repairs.html">Learn More <span class="iconify arrow3" data-icon="akar-icons:arrow-right" data-inline="false"></span></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="well animatable zoomIn">
-            <div class="text-center animatable fadeInUp" style="color: #036; font-size: 60px; animation-delay: .8s;"><span class="iconify" data-icon="whh:cctv" data-inline="false"></span><span class="iconify" data-icon="ic:outline-fingerprint" data-inline="false"></span> </div>
-            <br>
-            <h4 class="text-center animatable fadeInUp" style="color: #404040; font-weight: bold; animation-delay: .8s;">CCTV & Access Control Installations</h4>
-            <p class="animatable fadeInUp" style="color: #808080; font-size: 16px; line-height: 25px; animation-delay: .8s;">If it's tech; we do it! Hence our name, AnythingTech. We do CCTV installations in Gauteng. We offer CCTV surveillance systems to protect your homes or business premises (commercial and residential complexes). We supply and install the latest wired or wireless solutions. We use top of the the range from trusted brands. We use HIKvision cameras & other hardware that are durable and reliable.</p>
-            <div class="text-center">
-              <a class="btn btn-sm" href="cctv-access-control.html">Learn More <span class="iconify arrow4" data-icon="akar-icons:arrow-right" data-inline="false"></span></a>
-            </div>
-          </div>
-        </div>
+        <h4 class="animatable fadeInUp" style="color: #036;">Application Criteria for a salary loan</h4>
+          <ul style="padding-left: 10px; margin-top: 20px;">
+            <li class="animatable fadeInUp" style="animation-delay: .3s"><i class="fas fa-check-circle"></i> &nbsp; You must be 18 and older, have a valid South African Bank Account, have a valid South African ID and should be permanently employed </li>
+            <li class="animatable fadeInUp" style="animation-delay: .7s"><i class="fas fa-check-circle"></i> &nbsp; You will be required to provide proof of income; 3 months recent payslips & 3 months recent bank account statements</li>
+            <li class="animatable fadeInUp" style="animation-delay: .9s"><i class="fas fa-check-circle"></i> &nbsp; Even if you took and paid up a loan same creteria will be requested on borrowing</li>
+          </ul>
+          <br>
+          <h4 class="animatable fadeInUp" style="color: #036;">Payment Turnaround Time</h4>
+          <ul style="padding-left: 0; margin-top: 20px;">
+            <li class="animatable fadeInUp" style="animation-delay: .9s"><span style="color: #036; font-size: 40px;" class="iconify" data-icon="entypo:back-in-time"></span> &nbsp; One month circle for repayment plus 30% interest.</li>
+          </ul>
+        </div>    
       </div>
     </div>
   </div>
-  <div class="container-fluid work" id="work" style="background: rgba(230,247,255,1); min-height: 400px; padding-top: 50px; padding-left: 7%; padding-bottom: 70px;">
-    <br>
-    <div class="row">
-      <div class="col-sm-4" style="display: flex;">
-        <div style="width: 30%; margin-top: 20px; z-index: 2;">
-          <img src="images/ubiquiti.png" class="img-fluid" style="width: 100%;">
-        </div>
-        <div style="width: 70%; margin-top: 0; margin-left: -50px; z-index: 1;">
-          <img src="images/macbook.png" class="img-fluid" style="width: 100%;">
-        </div>
-      </div>  
-      <div class="col-sm-8">
-        <br>
-        <h4><span class="iconify" data-icon="mdi:seal-variant" data-inline="false" style="color: #6600ff; font-size: 60px;"></span> We pride ourselves in providing excellent service</h4>
-        <ul style="padding-left: 20px;">
-          <li class="animatable fadeInUp" style="animation-delay: .3s"><i class="fas fa-check-circle"></i> &nbsp; Affordable & highly professional service.</li>
-          <li class="animatable fadeInUp" style="animation-delay: .7s"><i class="fas fa-check-circle"></i> &nbsp; We offer a wide range of products and services under one roof.</li>
-          <li class="animatable fadeInUp" style="animation-delay: .9s"><i class="fas fa-check-circle"></i> &nbsp; We use modern & innovative methods, techniques and equipment to accomplish our services.</li>
-          <li class="animatable fadeInUp" style="animation-delay: 1.1s"><i class="fas fa-check-circle"></i> &nbsp; We are highly disciplined in executing our activities in compliance to the safety and other regulations in the industry.</li>
-        </ul>
-      </div>    
-    </div>
-  </div>
-  <div class="container-fluid contact" id="contact" style="min-height: 400px; background: rgb(102,0,255); background: linear-gradient(110deg, rgba(102,0,255,1) 20%, rgba(51,204,204,1) 90%); color: #fff;">
+  <div class="container-fluid contact" id="contact" style="min-height: 400px; background: #99caff; background: linear-gradient(110deg, #99caff 20%, #1a88ff 90%); color: #fff;">
     <div class="container" style="padding-top: 80px;">
+
       <div class="row">
         <div class="col-sm-5"style="margin-top: 0; margin-bottom: 30px;">
-          <img src="images/web-design5.svg" alt="Eazi World Web Designs svg" class="img-fluid">
-          <div class="" style="display: flex; margin-top: 10px;">
+          <img src="images/salesforce-solutions.png" alt="Eazi World Web Designs svg" class="img-fluid">
+          <!--<div class="" style="display: flex; margin-top: 10px;">
             <img src="images/whatsapp.png" alt="WhatsApp Logo" width="45px" class="img-fluid">
             <a href="https://wa.me/+27662025691" style="color: #fff; font-size: 25px; font-weight: bolder; margin-left: 5px;">+27 81 700 4035</a>
-          </div>
+          </div>-->
         </div>
         <div class="col-sm-7" id="main-form">
           <form id="contactForm" class="contact__form" method="post" action="mail.php" name="contactForm" novalidate>
@@ -427,16 +403,11 @@ By taking repayments directly from your paycheck, you never have to worry about 
               <input type="number" class="form-control" id="phone" placeholder="* Cellphone number" name="phone" ng-model="user.phone" ng-minlength="10" required>
               <p ng-show="contactForm.phone.$invalid && !contactForm.phone.$pristine && contactForm.phone.$touched" class="help-block">Please enter valid cellphone number</p>
             </div>
-            <div class="form-group" ng-class="{'has-error' : contactForm.package.$invalid && !contactForm.package.$pristine && contactForm.package.$touched}">
-              <select class="form-control" id="package" name="package" required style="border: 1px solid #0F7AB8; padding: 15px auto;">
-                <option disabled="" selected="">* Select A Service</option>
-                <option>Web Design</option>
-                <option>Wifi Installation</option>
-                <option>Computer Repairs</option>
-                <option>CCTV & Access Control</option>
-              </select>
-              <p ng-show="contactForm.package.$invalid && !contactForm.package.$pristine && contactForm.package.$touched" class="help-block">Please select a package</p>
+            <div class="form-group" ng-class="{'has-error' : contactForm.city.$invalid && !contactForm.city.$pristine && contactForm.city.$touched}">
+              <input type="text" class="form-control" id="city" placeholder="* City" name="city"  ng-model="user.city" ng-minlength="4" required>
+              <p ng-show="contactForm.city.$invalid && !contactForm.city.$pristine && contactForm.city.$touched" class="help-block">Please enter valid city</p>
             </div>
+
             <div class="form-group" ng-class="{'has-error' : contactForm.comment.$invalid && !contactForm.comment.$pristine && contactForm.comment.$touched}">
               <textarea class="form-control" rows="5" id="comment" placeholder="* Comments" name="comment" ng-model="user.comment" required style="border: 1px solid #0F7AB8; height: 70px;"></textarea>
               <p ng-show="contactForm.comment.$invalid && !contactForm.comment.$pristine && contactForm.comment.$touched" class="help-block">Please enter valid comments</p>
@@ -471,12 +442,12 @@ By taking repayments directly from your paycheck, you never have to worry about 
           <ul class="" style="list-style-type: none; padding-left: 0;">
             <li class="animatable fadeInUp"><a id="home-btn2" href="#home">Home</a></li>
             <li class="animatable fadeInUp"><a id="about-btn2" href="#about">About Us</a></li>
-            <li class="animatable fadeInUp"><a id="services-btn2" href="#services">Services</a></li>
-            <li class="animatable fadeInUp"><a href="web-design.html">Website Design & Development</a></li>
+            <li class="animatable fadeInUp"><a id="services-btn2" href="#services">Payment Terms</a></li>
+            <!--<li class="animatable fadeInUp"><a href="web-design.html">Website Design & Development</a></li>
             <li class="animatable fadeInUp"><a href="networking.html">Wifi Network Installations</a></li>
             <li class="animatable fadeInUp"><a href="computer-repairs.html">Computer Repairs & Tech Support</a></li>
             <li class="animatable fadeInUp"><a href="cctv-access-control.html">CCTV & Access Control Installation</a></li>
-            <li class="animatable fadeInUp"><a href="blog/index.html">Tech Blog</a></li>
+            <li class="animatable fadeInUp"><a href="blog/index.html">Tech Blog</a></li>-->
             <li class="animatable fadeInUp"><a id="contact-btn3" href="contact">Contact Us</a></li>
           </ul>
           <br>
@@ -485,18 +456,17 @@ By taking repayments directly from your paycheck, you never have to worry about 
         <div class="col-sm-7 details">
           <!--<h4 class="animatable fadeInUp" style="color: #fff;">Contact Details:</h4>-->
           <p class="animatable fadeInUp"><span style="font-size: 17px;"><i class="fab fa-whatsapp"></i></span> &nbsp;<a href="https://wa.me/+27662025691">+27 81 700 4035</a></p>
-          <p class="animatable fadeInUp"><i class="far fa-envelope"></i> &nbsp;<a href="mailto:info@anythingtech.co.za">info@anythingtech.co.za</a></p>
-          <p class="animatable fadeInUp"><i class="fab fa-facebook-square" style="font-size: 18px;"></i> &nbsp;<a href="https://fb.com/anythingtech/">@anythingtech</a></p>
-          <p class="animatable fadeInUp"><i class="fas fa-map-marker" style="font-size: 18px;"></i> &nbsp;Villa Montego, 24 Langeveld Street, Vorna Valley | Midrand</p>
-          <br>
-          <p style="">Copyright &copy; <script>document.write(new Date().getFullYear());</script> | Anything Tech IT Solutions</p>
+          <p class="animatable fadeInUp"><i class="far fa-envelope"></i> &nbsp;<a href="mailto:info@ultimatetsfs.co.za">info@ultimatetsfs.co.za</a></p>
+          <p class="animatable fadeInUp"><i class="fab fa-facebook-square" style="font-size: 18px;"></i> &nbsp;<a href="https://fb.com/ultimatetsfs/">@ultimatetsfs</a></p>
+          <!--<p class="animatable fadeInUp"><i class="fas fa-map-marker" style="font-size: 18px;"></i> &nbsp;Villa Montego, 24 Langeveld Street, Vorna Valley | Midrand</p>-->
+          <p style="">Copyright &copy; <script>document.write(new Date().getFullYear());</script> | Ultimate TS Financial Services</p>
           <a class="navbar-brand" href="#" style="display: flex; line-height: 21px; margin-top: 15px;">
-            <img src="images/logo.png" class="img-fluid" width="60px" style="margin-top: 0; margin-right: 8px; filter: grayscale(100%);"> 
+            <img src="images/logo.png" class="img-fluid" width="60px" style="margin-top: 0; margin-right: 8px; //filter: grayscale(100%);"> 
             <div class="" style="margin-top: 12px; line-height: 17px;">
-              <span style="color: #fff; font-size: 23px; font-weight: bolder;">Anything</span>
-              <span style="color: #fff;font-size: 23px; font-weight: bolder; margin-left: -5px;">Tech</span>
+              <span style="color: #fff; font-size: 23px; font-weight: bolder;">Ultimate</span>
+              <span style="color: #fff;font-size: 23px; font-weight: bolder; margin-left: -5px;">TS</span>
               <br>
-              <span style="color: #b3b3b3; font-size: 11px; text-transform: uppercase; letter-spacing: 2px;">Info-tech Solutions</span>
+              <span style="color: #b3b3b3; font-size: 13px; text-transform: uppercase; //letter-spacing: 2px;">Financial Services</span>
             </div>
           </a>
           <br>
@@ -512,12 +482,12 @@ By taking repayments directly from your paycheck, you never have to worry about 
   </div>
   <script src="appctrl.js"></script>
   <script src="main.js"></script>
-  <script>
-  window.fwSettings={
-  'widget_id':70000002145
-  };
-  !function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}() 
-</script>
-<script type='text/javascript' src='https://widget.freshworks.com/widgets/70000002145.js' async defer></script>
+  <!--<script>
+    window.fwSettings={
+      'widget_id':70000002145
+    };
+    !function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}() 
+  </script>
+  <script type='text/javascript' src='https://widget.freshworks.com/widgets/70000002145.js' async defer></script>-->
 </body>
 </html>
