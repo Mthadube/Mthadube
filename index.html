@@ -7,6 +7,10 @@
   <link rel="icon" type="image/png" href="images/logo.png"/>
   <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/particles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
@@ -15,13 +19,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
   <style>
-    body { 
+    body {   
       position: relative; 
+      font-family: 'Raleway', sans-serif;    
     }     
 
-    .navbar-toggler {
+    .navbar-toggler {    
       border-color: #036;   
-    }  
+    }   
 
     .navbar-toggler-icon {
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 153, 9, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
@@ -36,7 +41,7 @@
     }
 
     #top-nav ul li:hover a {
-      border-bottom: 2px solid #ff9909;
+      border-bottom: 2px solid #9933ff;
     }
 
     #top-nav .navbar-nav a {
@@ -47,16 +52,16 @@
     }
 
     .navbar li .active {
-      border-bottom: 2px solid #ff9909;
+      border-bottom: 2px solid #9933ff;
     }
 
     .navbar li a .active {
       font-weight: bolder;
     }
 
-    .navbar #contact-btn  {
+    /*.navbar #contact-btn  {
       color: #036; 
-      border: 2px solid #ff9909; 
+      border: 2px solid #9933ff; 
       border-radius: 15px; 
       font-weight: bold; 
       padding: 7px 20px;
@@ -65,16 +70,17 @@
     .navbar #contact-btn:hover {
       background: #036;
       color: #fff;
-    }
+    }  */
 
     .main-carousel .iconify {
-      color: #ff9909;
+      color: #9933ff;
       font-weight: bolder;
     }
 
     .main-carousel h1 {
       font-size: 40px; 
       font-weight: 1000;
+      text-shadow: 1px 1px 3px #555;
     }
 
     .main-carousel ul {
@@ -104,12 +110,12 @@
     }
 
     .main-carousel .btn {
-      background: #ff9909;
-      border: 1px solid #fff;
-      border-radius: 5px;
-      color: #036;
+      background: transparent;
+      border: 2px solid #9933ff;
+      border-radius: 8px;
+      color: #fff;
       font-weight: bold;
-      padding: 5px 30px;
+      padding: 8px 30px;
     }
     .main-carousel .btn:hover {
       transform: scale(1.1);
@@ -129,8 +135,8 @@
     }
 
     .about {
-      background: rgba(230,247,255,1);
-      margin-top: -160px;
+      background: #fff;
+      margin-top: -200px;
     }
 
     .about h2 {
@@ -140,7 +146,7 @@
     }
 
     .about .iconify {
-      color: #ff9909;
+      color: #9933ff;
       font-size: 70px;
       animation-delay: .2s;
     }
@@ -166,73 +172,41 @@
       }
     }
 
-    .services .btn {
-      background: #fff;
-      border: 2px solid #036;
-      border-radius: 15px;
-      color: rgb(102,0,255);
-      font-weight: bold;
-      padding: 3px 25px;
+    .skills .iconify {
+      font-size: 80px;
+      color: #1a88ff;
     }
 
-    .services .btn:hover {
-      border: 2px solid rgb(102,0,255);
-      color: #036;
-      transform: scale(1.1);
+    .skills h3 {
+      margin-top: 25px;
+    }
+
+    .work a:hover img {
+      transform: scale(1.11);
       transition: ease-in-out .6s;
     }
 
-    .services .btn:hover .arrow1 {
-      animation-name: arrow; 
-      animation-duration: 1s; 
-      animation-iteration-count: infinite;
+    .work a {
+      text-decoration: none;
     }
 
-    .services .btn:hover .arrow2 {
-      animation-name: arrow; 
-      animation-duration: 1s; 
-      animation-iteration-count: infinite;
+    .work .portfolio-text {
+      display: none;
+      color: #fff;
+      background: #1a88ff;
+      padding: 5px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;      
     }
 
-    .services .btn:hover .arrow3 {
-      animation-name: arrow; 
-      animation-duration: 1s; 
-      animation-iteration-count: infinite;
+    .work a:hover .portfolio-text {
+      display: block;
+      transition: ease-in-out .5s;
     }
 
-    .services .btn:hover .arrow4 {
-      animation-name: arrow; 
-      animation-duration: 1s; 
-      animation-iteration-count: infinite;
-    }
-
-    @keyframes arrow {
-      0% {transform: translateX(0);}
-      50% {transform: translateX(8px);} 
-      100% {transform: translateX(0);}
-    }
-
-    .services .col-sm-6 {
-      margin-bottom: 50px;
-    }
-
-    .work ul li {
-      list-style-type: none;
-      font-size: 17px;
-      line-height: 35px;
-    }
-
-    .work i {
-      color: #00b300;
-    }
-
-    @media only screen and (max-width: 1000px){
-      .work .row {
-        display: block;
-      }
-      .col-sm-4 div {
-        width: 100%;
-      }
+    .work .col-sm-6, .work .col-md-4 {
+      padding-bottom: 20px;
     }
 
     .bottom-nav ul li a {
@@ -258,13 +232,11 @@
   <nav class="navbar navbar-expand-lg fixed-top" id="top-nav" style="background: #99caff; //border-bottom: 1px solid rgba(102,0,255,0.2);">
     <div class="container">
       <a class="navbar-brand" href="#" style="display: flex; line-height: 21px; margin-top: 25px;">
-        <img src="images/logo.png" class="img-fluid" width="65px" style="margin-top: -16px; margin-right: 8px;"> 
-        <div class="" style="margin-top: 5px;">
-          <span style="color: #036; font-size: 30px; font-weight: bolder;">Ultimate</span>
-          <span style="color: #ff9909; font-size: 30px; font-weight: bolder; margin-left: -5px;">TS</span>
-          <br>
-          <span style="color: #808080; font-size: 15px; font-weight: bold; text-transform: uppercase;">Financial Services</span>
-        </div>
+        <img src="images/logo.png" class="img-fluid" width="85px" style="margin-top: -16px; margin-right: 8px;
+        -webkit-filter: drop-shadow(1px 1px 2px #fff)
+        drop-shadow(-1px -1px 2px #fff);
+        filter: drop-shadow(1px 1px 2px #fff) 
+        drop-shadow(-1px -1px 2px #fff);"> 
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -275,121 +247,216 @@
             <a id="#home-btn" class="nav-link" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a id="about-btn" class="nav-link" href="#about">About Us</a>
+            <a id="about-btn" class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a id="services-btn" class="nav-link" href="#services">Payment terms</a>
+            <a id="skills-btn" class="nav-link" href="#skills">Skillset</a>
           </li>
-          <!--<li class="nav-item">
-            <a class="nav-link" href="blog/index.html">Tech Blog</a>
-          </li>-->
           <li class="nav-item">
-            <a id="contact-btn" class="nav-link btn btn-sm" href="#contact">Get Started</a>
+            <a id="work-btn" class="nav-link" href="#work">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a id="contact-btn" class="nav-link btn btn-sm" href="#contact">Contact Me</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <div class="container-fluid main-carousel" style="margin-top: 85px; min-height: 400px; background: rgb(102,0,255); background: linear-gradient(180deg, #99caff 10%, #1a88ff); color: #fff;">
+  <div class="container-fluid main-carousel" style="margin-top: 85px; margin-bottom: -1px; background: rgb(102,0,255); background: linear-gradient(180deg, #99caff 10%, #1a88ff); color: #fff; padding-top: 70px; position: relative; overflow: hidden;">
     <div class="container">
+      <div class="animation-wrapper">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+      </div>
       <div class="row">
-        <div class="col-sm-7" style="margin-top: 10%;">
-          <h1 class="animatable fadeInUp">Ultimate TS Financial Solutions</h1>
-          <h3 class="animatable fadeInUp">A Gateway To Financial Freedom</h3>
+        <div class="col-sm-7 mx-auto text-center" style="margin-top: 5%; padding-bottom: 100px;">
+          <h1 class="animatable fadeInUp">Hello, I'm Mthandazo Dube</h1>
           <br>
-          <p class="animatable fadeInUp" style="color: #036;">We help you to achieve more by giving you salary loans with easy terms!</p>
+          <h3 class="animatable fadeInUp" style="text-shadow: 1px 1px 1px #777;">I'm Front-end Web Developer who loves creating simple, beautiful websites.</h3>
+          <br>
+          <!--<p class="animatable fadeInUp" style="color: #036;">We help you to achieve more by giving you salary loans with easy terms!</p>-->
           <br>
           <div class="button-container animatable fadeInUp">
-            <a class="" id="contact-btn2" href="#contact"><button class="btn">Get Started Today</button></a>
+            <a class="" id="contact-btn2" href="#contact"><button class="btn">Contact Me</button></a>
+            <a class="" id="contact-btn2" href="Resume.pdf"><button class="btn" style="margin-left: 30px; padding-left: 50px; padding-right: 50px;">Resume</button></a>
           </div>
-        </div>
-        <div class="col-sm-5" style="position: relative;">
-          <img src="images/tech.png" alt="" class="img-fluid img0">
-          <img src="images/update.png" alt="Wifi Equipment" class="img-fluid carousel-img" style="z-index: 2; margin-top: 2%; margin-left: 25px; filter: contrast(110%);">
         </div>
       </div>
     </div>
   </div>
-  <div class="container-fluid" style="margin-top: 0; padding: 0; background: rgba(230,247,255,1);">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1a88ff" fill-opacity="1" d="M0,32L48,32C96,32,192,32,288,37.3C384,43,480,53,576,64C672,75,768,85,864,96C960,107,1056,117,1152,128C1248,139,1344,149,1392,154.7L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+  <div class="container-fluid" style="margin-top: 0; padding: 0; background: #fff;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1a88ff" fill-opacity="1" d="M0,0L120,0C240,0,480,0,720,26.7C960,53,1200,107,1320,133.3L1440,160L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
   </div>
   <div class="container-fluid about" id="about">
     <div class="container">
+      <h2 class="text-center animatable fadeInUp" style="font-weight: bolder;">ABOUT ME</h2>
+      <div class="animatable zoomIn" style="animation-delay: .6s;">
+        <hr style="width: 50%; border: 0; height: 2px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #0066ff, rgba(0, 0, 0, 0));">
+      </div>
+      <br>
+      <p class="animatable fadeInUp" style="font-size: 18px; animation-delay: 1s;">I'm a passionate frontend web developer based in Midrand, Johannesburg. I have a passion for web development and love to create great looking web-apps and websites that work across all devices and platforms. I am always willing to learn new technologies, languages and frameworks.</p>
+      <br>
+      <br>
       <div class="row">
         <div class="col-sm-4 text-center">
-          <span class="iconify animatable zoomIn" data-icon="fa-solid:handshake"></span>
-          <p style="color: #036; font-size: 20px; margin-top: 30px;" class="animatable fadeInUp">Higher acceptance rate</p>
+          <span class="iconify animatable zoomIn" data-icon="cryptocurrency:html"></span>
+          <p style="color: #036; font-size: 20px; margin-top: 30px;" class="animatable fadeInUp">Aesthetic. Quality work, following strict development practices.</p>
         </div>
         <div class="col-sm-4 text-center">
-          <span class="iconify animatable zoomIn" data-icon="vaadin:piggy-bank-coin" data-inline="false"></span>
-          <p style="color: #036; font-size: 20px; margin-top: 30px;" class="animatable fadeInUp">More affordable</p>
+          <span class="iconify animatable zoomIn" data-icon="mdi:responsive"></span>
+          <p style="color: #036; font-size: 20px; margin-top: 30px;" class="animatable fadeInUp">Responsive. My layouts will work on any device, big or small.</p>
         </div>
         <div class="col-sm-4 text-center">
-          <span class="iconify animatable zoomIn" data-icon="emojione-monotone:money-bag"></span>
-          <p style="color: #036; font-size: 20px; margin-top: 30px;" class="animatable fadeInUp">Easier repayments</p>
+          <span class="iconify animatable zoomIn" data-icon="emojione-monotone:rocket"></span>
+          <p style="color: #036; font-size: 20px; margin-top: 30px;" class="animatable fadeInUp">Intuitive. I love making dynamic websites & web apps.</p>
         </div>
       </div>
       <br>
       <br>
-    </div>
+    </div>  
   </div>
-  <div class="jumbotron services" id="services" style="border-radius: 0; background: #fff; margin-bottom: 0;">
-    <div class="container">
-      <h2 class="text-center animatable fadeInUp"><span style="color: #ff9909; margin-top: 50px;">About</span> Ultimate TS Financial Services</h2>
-      <br>
-      <p class="animatable fadeInUp" style="font-size: 18px;">We are an online financial services company. We provide affordable loans against your salary. We offer a minimum loan amount from R500 to R5000. Once off service Fee is R70. Initiation fee is R150.</p>
-      <p class="animatable fadeInUp" style="font-size: 18px;">With higher acceptance than traditional lenders and repayments taken directly from your paycheck, Salary Finance makes borrowing the money you need easier than ever.</p>
-      <br>
-      <br>
-    </div>
-  </div>
-  <div class="container-fluid work" id="work" style="background: rgba(230,247,255,1); padding-top: 50px; padding-bottom: 70px;">
+  <div class="container-fluid skills" id="skills" style="background: rgba(230,247,255,1); padding-top: 50px; padding-bottom: 70px;">
     <br>
     <div class="container">
-      <div class="row">
-        <div class="col-md-4" style="">
-          <div style="margin-top: 50px;">
-            <img src="images/intro-financial.svg" class="img-fluid" style="width: 100%;">
-          </div>
-        </div>  
-        <div class="col-sm-8" style="padding-left: 50px;">
-          <br>
-          <h2 class="animatable fadeInUp" style="color: #036;">Payment Terms</h2>
-          <br>
-          <ul style="padding-left: 0;">
-          <li class="animatable fadeInUp" style="animation-delay: .3s"> &nbsp;<span style="color: #ff9909; font-size: 25px;" class="iconify" data-icon="fa-regular:credit-card"></span> &nbsp; Collection all payments are done via debit order.</li>
-          <li class="animatable fadeInUp" style="animation-delay: .9s"><span style="color: #ff9909; font-size: 40px;" class="iconify" data-icon="ic:baseline-calendar-month"></span> &nbsp; One month circle for repayment plus 30% interest.</li>
-        </ul>
-        <br>
-        <h4 class="animatable fadeInUp" style="color: #036;">Application Criteria for a salary loan</h4>
-          <ul style="padding-left: 10px; margin-top: 20px;">
-            <li class="animatable fadeInUp" style="animation-delay: .3s"><i class="fas fa-check-circle"></i> &nbsp; You must be 18 and older, have a valid South African Bank Account, have a valid South African ID and should be permanently employed </li>
-            <li class="animatable fadeInUp" style="animation-delay: .7s"><i class="fas fa-check-circle"></i> &nbsp; You will be required to provide proof of income; 3 months recent payslips & 3 months recent bank account statements</li>
-            <li class="animatable fadeInUp" style="animation-delay: .9s"><i class="fas fa-check-circle"></i> &nbsp; Even if you took and paid up a loan same creteria will be requested on borrowing</li>
-          </ul>
-          <br>
-          <h4 class="animatable fadeInUp" style="color: #036;">Payment Turnaround Time</h4>
-          <ul style="padding-left: 0; margin-top: 20px;">
-            <li class="animatable fadeInUp" style="animation-delay: .9s"><span style="color: #036; font-size: 40px;" class="iconify" data-icon="entypo:back-in-time"></span> &nbsp; One month circle for repayment plus 30% interest.</li>
-          </ul>
-        </div>    
+      <h2 class="text-center animatable fadeInUp" style="font-weight: bolder;">Skillset</h2>
+      <div class="animatable zoomIn" style="animation-delay: .6s;">
+        <hr style="width: 50%; border: 0; height: 2px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #0066ff, rgba(0, 0, 0, 0));">
+      </div>
+      <div class="row" style="margin-top: 80px;">
+        <div class="col text-center">
+          <span class="iconify animatable zoomIn" data-icon="fa-brands:html5"></span>
+          <h3 class="animatable fadeInUp">HTML5</h3>
+        </div>
+        <div class="col text-center">
+          <span class="iconify animatable zoomIn" data-icon="fa-brands:css3-alt"></span>
+          <h3 class="animatable fadeInUp">CSS3</h3>
+        </div>
+        <div class="col text-center">
+          <span class="iconify animatable zoomIn" data-icon="akar-icons:bootstrap-fill"></span>
+          <h3 class="animatable fadeInUp">Bootstap</h3>
+        </div>
+        <div class="col text-center">
+          <span class="iconify animatable zoomIn" data-icon="fa-brands:js-square"></span>
+          <h3 class="animatable fadeInUp">JavaScript</h3>
+        </div>
+        <div class="col text-center">
+          <span class="iconify animatable zoomIn" data-icon="akar-icons:angular-fill"></span>
+          <h3 class="animatable fadeInUp">AngularJS</h3>
+        </div>
+        <div class="col text-center">
+          <span class="iconify animatable zoomIn" data-icon="bi:git"></span>
+          <h3 class="animatable fadeInUp">Git</h3>
+        </div>
       </div>
     </div>
   </div>
-  <div class="container-fluid contact" id="contact" style="min-height: 400px; background: #99caff; background: linear-gradient(110deg, #99caff 20%, #1a88ff 90%); color: #fff;">
+  <div class="container-fluid work" id="work" style="padding-top: 80px; padding-bottom: 0;">
+    <div class="container">
+      <h2 class="text-center animatable fadeInDown" style="font-weight: bold;">My Portfolio</h2>
+      <div class="animatable zoomIn" style="animation-delay: .6s;">
+        <hr style="width: 50%; border: 0; height: 2px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #0066ff, rgba(0, 0, 0, 0));">
+      </div>
+      <p class="text-center animatable fadeInUp" style="font-size: 20px;">Take a look at some of my recent work.</p>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-sm-6 col-md-4 text-center" style="padding-left: 0; padding-right: 0;">
+          <a href="https://pensive-sammet-a5402c.netlify.app/" target="_blank">
+            <div class="animatable zoomIn" style="position: relative;">
+              <img src="images/mac4.jpg" alt="Web Design portfolio" class="img-fluid">  
+              <div class="animatable zoomIn" style="position: absolute; left: 8%; bottom: 16%; width: 24%; animation-delay: .8s;">
+                <img src="images/phone4.png" alt="" class="img-fluid">
+              </div>
+            </div>
+            <div class="portfolio-text text-center animatable zoomIn">
+              <h5>Lekabo Holdings</h5>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4 text-center animatable zoomIn" style="padding-left: 0; padding-right: 0;">
+          <a href="http://anythingtech.co.za/" target="_blank">
+            <div class="animatable zoomIn" style="position: relative;">
+              <img src="images/mac2.jpg" alt="Web Design portfolio" class="img-fluid">
+              <div class="animatable zoomIn" style="position: absolute; left: 8%; bottom: 16%; width: 24%; animation-delay: .8s;">
+                <img src="images/phone5.png" alt="" class="img-fluid">
+              </div>
+            </div>
+            <div class="portfolio-text text-center animatable zoomIn">
+              <h5>Anything Tech IT Solutions</h5>
+            </div>
+          </a>    
+        </div>
+        <div class="col-sm-6 col-md-4 text-center animatable zoomIn" style="padding-left: 0; padding-right: 0;">
+          <a href="https://sharp-sinoussi-c8d764.netlify.app/" target="_blank">
+            <div class="animatable zoomIn" style="position: relative;">
+              <img src="images/mac1.jpg" alt="Web Design portfolio" class="img-fluid">
+              <div class="animatable zoomIn" style="position: absolute; left: 8%; bottom: 16%; width: 24%; animation-delay: .8s;">
+                <img src="images/phone1.png" alt="" class="img-fluid">
+              </div>
+            </div>
+            <div class="portfolio-text text-center animatable zoomIn">
+              <h5>Ultimate TS Financial Services</h5>
+            </div>
+          </a>
+        </div> 
+        <div class="col-sm-6 col-md-4 text-center animatable zoomIn" style="padding-left: 0; padding-right: 0;">
+          <a href="https://thirsty-kare-c6f273.netlify.app/" target="_blank">
+            <div class="animatable zoomIn" style="position: relative;">
+              <img src="images/mac6.jpg" alt="Web Design portfolio" class="img-fluid">
+              <div class="animatable zoomIn" style="position: absolute; left: 8%; bottom: 16%; width: 24%; animation-delay: .8s;">
+                <img src="images/phone2.png" alt="" class="img-fluid">
+              </div>
+            </div>
+            <div class="portfolio-text text-center animatable zoomIn">
+              <h5>LYT Bank</h5>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4 text-center animatable zoomIn" style="padding-left: 0; padding-right: 0;">
+          <a href="https://confident-kare-7ac373.netlify.app/" target="_blank">
+            <div class="animatable zoomIn" style="position: relative;">
+              <img src="images/mac5.jpg" alt="Web Design portfolio" class="img-fluid">
+              <div class="animatable zoomIn" style="position: absolute; left: 8%; bottom: 16%; width: 24%; animation-delay: .8s;">
+                <img src="images/phone3.png" alt="" class="img-fluid">
+              </div>
+            </div>
+            <div class="portfolio-text text-center animatable zoomIn">
+              <h5>Jerry Nkeli Attorneys</h5>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4 text-center animatable zoomIn" style="padding-left: 0; padding-right: 0;">
+          <a href="http://eazihelp.co.za/" target="_blank">
+            <div class="animatable zoomIn" style="position: relative;">
+              <img src="images/mac3.jpg" alt="Web Design portfolio" class="img-fluid">
+              <div class="animatable zoomIn" style="position: absolute; left: 8%; bottom: 16%; width: 24%; animation-delay: .8s;">
+                <img src="images/phone6.png" alt="" class="img-fluid">
+              </div>
+            </div>
+            <div class="portfolio-text text-center animatable zoomIn">
+              <h5>Eazi Help</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid" style="margin-top: -120px; padding: 0; background: #fff;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#99caff" fill-opacity="1" d="M0,256L48,245.3C96,235,192,213,288,213.3C384,213,480,235,576,250.7C672,267,768,277,864,282.7C960,288,1056,288,1152,266.7C1248,245,1344,203,1392,181.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+  </div>
+  <div class="container-fluid contact" id="contact" style="min-height: 400px; background: #99caff; background: linear-gradient(#99caff, #1a88ff); color: #fff;">
     <div class="container" style="padding-top: 80px;">
 
       <div class="row">
-        <div class="col-sm-5"style="margin-top: 0; margin-bottom: 30px;">
-          <img src="images/salesforce-solutions.png" alt="Eazi World Web Designs svg" class="img-fluid">
-          <!--<div class="" style="display: flex; margin-top: 10px;">
-            <img src="images/whatsapp.png" alt="WhatsApp Logo" width="45px" class="img-fluid">
-            <a href="https://wa.me/+27662025691" style="color: #fff; font-size: 25px; font-weight: bolder; margin-left: 5px;">+27 81 700 4035</a>
-          </div>-->
-        </div>
-        <div class="col-sm-7" id="main-form">
+        <div class="col-sm-6 mx-auto" id="main-form">
           <form id="contactForm" class="contact__form" method="post" action="mail.php" name="contactForm" novalidate>
-            <h4 class="text-center" style="color: #fff; font-weight: bolder; text-transform: uppercase;">Inquiry Form</h4>
+            <h4 class="text-center animatable fadeInDown" style="color: #fff; font-weight: bolder; text-transform: uppercase;">Contact Me</h4>
+            <div class="animatable zoomIn" style="animation-delay: .6s;">
+              <hr style="width: 80%; border: 0; height: 2px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #0066ff, rgba(0, 0, 0, 0));">
+            </div>
+            <br>
             <br>
             <div class="form-group" ng-class="{'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine && contactForm.name.$touched}">
               <input type="text" class="form-control" id="name" placeholder="* Full name" name="name"  ng-model="user.name" ng-minlength="3" required>
@@ -399,10 +466,10 @@
               <input type="email" class="form-control" id="email" placeholder="* Email address" name="email" ng-model="user.email" required>
               <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine && contactForm.email.$touched" class="help-block">Please enter valid email address</p>
             </div>
-            <div class="form-group" ng-class="{'has-error' : contactForm.phone.$invalid && !contactForm.phone.$pristine && contactForm.phone.$touched}">
+            <!--<div class="form-group" ng-class="{'has-error' : contactForm.phone.$invalid && !contactForm.phone.$pristine && contactForm.phone.$touched}">
               <input type="number" class="form-control" id="phone" placeholder="* Cellphone number" name="phone" ng-model="user.phone" ng-minlength="10" required>
               <p ng-show="contactForm.phone.$invalid && !contactForm.phone.$pristine && contactForm.phone.$touched" class="help-block">Please enter valid cellphone number</p>
-            </div>
+            </div>-->
             <div class="form-group" ng-class="{'has-error' : contactForm.city.$invalid && !contactForm.city.$pristine && contactForm.city.$touched}">
               <input type="text" class="form-control" id="city" placeholder="* City" name="city"  ng-model="user.city" ng-minlength="4" required>
               <p ng-show="contactForm.city.$invalid && !contactForm.city.$pristine && contactForm.city.$touched" class="help-block">Please enter valid city</p>
@@ -441,34 +508,21 @@
         <div class="col-sm-5 bottom-nav">
           <ul class="" style="list-style-type: none; padding-left: 0;">
             <li class="animatable fadeInUp"><a id="home-btn2" href="#home">Home</a></li>
-            <li class="animatable fadeInUp"><a id="about-btn2" href="#about">About Us</a></li>
-            <li class="animatable fadeInUp"><a id="services-btn2" href="#services">Payment Terms</a></li>
-            <!--<li class="animatable fadeInUp"><a href="web-design.html">Website Design & Development</a></li>
-            <li class="animatable fadeInUp"><a href="networking.html">Wifi Network Installations</a></li>
-            <li class="animatable fadeInUp"><a href="computer-repairs.html">Computer Repairs & Tech Support</a></li>
-            <li class="animatable fadeInUp"><a href="cctv-access-control.html">CCTV & Access Control Installation</a></li>
-            <li class="animatable fadeInUp"><a href="blog/index.html">Tech Blog</a></li>-->
-            <li class="animatable fadeInUp"><a id="contact-btn3" href="contact">Contact Us</a></li>
+            <li class="animatable fadeInUp"><a id="about-btn2" href="#about">About Me</a></li>
+            <li class="animatable fadeInUp"><a id="skills-btn2" href="#skills">Skillset</a></li>
+            <li class="animatable fadeInUp"><a id="work-btn2" href="#work">Projects</a></li>
+            <li class="animatable fadeInUp"><a id="contact-btn3" href="contact">Contact Me</a></li>
+            <li class="animatable fadeInUp"><a href="Resume.pdf">Resume</a></li>
           </ul>
           <br>
           <br>
         </div>
         <div class="col-sm-7 details">
           <!--<h4 class="animatable fadeInUp" style="color: #fff;">Contact Details:</h4>-->
-          <p class="animatable fadeInUp"><span style="font-size: 17px;"><i class="fab fa-whatsapp"></i></span> &nbsp;<a href="https://wa.me/+27662025691">+27 81 700 4035</a></p>
-          <p class="animatable fadeInUp"><i class="far fa-envelope"></i> &nbsp;<a href="mailto:info@ultimatetsfs.co.za">info@ultimatetsfs.co.za</a></p>
-          <p class="animatable fadeInUp"><i class="fab fa-facebook-square" style="font-size: 18px;"></i> &nbsp;<a href="https://fb.com/ultimatetsfs/">@ultimatetsfs</a></p>
-          <!--<p class="animatable fadeInUp"><i class="fas fa-map-marker" style="font-size: 18px;"></i> &nbsp;Villa Montego, 24 Langeveld Street, Vorna Valley | Midrand</p>-->
-          <p style="">Copyright &copy; <script>document.write(new Date().getFullYear());</script> | Ultimate TS Financial Services</p>
-          <a class="navbar-brand" href="#" style="display: flex; line-height: 21px; margin-top: 15px;">
-            <img src="images/logo.png" class="img-fluid" width="60px" style="margin-top: 0; margin-right: 8px; //filter: grayscale(100%);"> 
-            <div class="" style="margin-top: 12px; line-height: 17px;">
-              <span style="color: #fff; font-size: 23px; font-weight: bolder;">Ultimate</span>
-              <span style="color: #fff;font-size: 23px; font-weight: bolder; margin-left: -5px;">TS</span>
-              <br>
-              <span style="color: #b3b3b3; font-size: 13px; text-transform: uppercase; //letter-spacing: 2px;">Financial Services</span>
-            </div>
-          </a>
+          <p class="animatable fadeInUp"><span style="font-size: 17px;"><i class="fab fa-whatsapp"></i></span> &nbsp;<a href="https://wa.me/+27613983580">+27 61 398 3580</a></p>
+          <p class="animatable fadeInUp"><i class="far fa-envelope"></i> &nbsp;<a href="mailto:mthadube@gmail.com">mthadube@gmail.com</a></p>
+          <p class="animatable fadeInUp"><i class="fab fa-twitter" style="font-size: 18px;"></i> &nbsp;<a href="https://twitter.com/Mthadube">@mthadube</a></p>
+          <p class="animatable fadeInUp">Copyright &copy; <script>document.write(new Date().getFullYear());</script> | Mthandazo Dube</p>
           <br>
         </div>
         <br>
@@ -482,12 +536,5 @@
   </div>
   <script src="appctrl.js"></script>
   <script src="main.js"></script>
-  <!--<script>
-    window.fwSettings={
-      'widget_id':70000002145
-    };
-    !function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}() 
-  </script>
-  <script type='text/javascript' src='https://widget.freshworks.com/widgets/70000002145.js' async defer></script>-->
 </body>
 </html>

@@ -57,9 +57,9 @@
     });
   });
   $(document).ready(function (){
-    $("#services-btn, #services-btn2").click(function (){
+    $("#skills-btn, #skills-btn2").click(function (){
       $('html, body').animate({
-        scrollTop: $("#services").offset().top -200
+        scrollTop: $("#skills").offset().top -200
       }, 900);
     });
   });
