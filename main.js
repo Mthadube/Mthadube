@@ -1,9 +1,9 @@
 (function ($) {
   'use strict';
-  /* Preloader JS */
+  // Preloader (if the #preloader div exists)
   $(window).on('load', function () {
-    if ($('.loader-wrapper').length) {
-      $('.loader-wrapper').delay(0).fadeOut('slow', function () {
+    if ($('#preloader').length) {
+      $('#preloader').delay(0).fadeOut('slow', function () {
         $(this).remove();
       });
     }

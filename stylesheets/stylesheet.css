@@ -1,90 +1,59 @@
 /* Prelaoder */
-.loader-wrapper {
+#preloader {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;  
-}
-.loader-wrapper .loader {
-  display: block;
-  position: relative;
-  left: 50%;       
-  top: 50%;     
-  width: 100px;
-  height: 100px;
-  margin-top: -50px; 
-  margin-left: -50px;           
-  border: 3px solid transparent;   
-  border-top-color: #10B5B1;
-  border-radius: 50%;
-  z-index: 1001;
-  -webkit-animation: spin 1.5s infinite linear;     
-  animation: spin 1.5s infinite linear;
-}
-.loader-wrapper .loader:before, .loader-wrapper .loader:after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-}
-.loader-wrapper .loader:before {
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  border: 3px solid transparent;
-  border-top-color:#0F7AB8;
-  -webkit-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear;
-}
-.loader-wrapper .loader:after {
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
-  border: 3px solid transparent;
-  border-top-color: #ff8533;
-  -webkit-animation: spin 1s infinite linear;
-  animation: spin 1s infinite linear;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-/*Section */
-.loader-section {
-  position: fixed;
-  top: 0;
-  width: 51%;
-  height: 100%;
-  background: #fff9f9;
-  z-index: 1000;
-}
-.loader-section.section-left {
-  left: 0;
-}
-.loader-section.section-right {
   right: 0;
+  bottom: 0;
+  z-index: 9999; 
+  overflow: hidden;
+  background: #f2f2f2;
 }
+
+
+/*CUSTOM PRELOADER*/
+
+.loader {
+  border: 0 solid transparent;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: calc(50vh - 75px); 
+  left: calc(50vw - 75px);
+}
+
+.loader:before, .loader:after{
+  content: '';
+  border: 1em solid #1a88ff;
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loader 2s linear infinite;
+  opacity: 0;
+}
+
+.loader:before{
+  animation-delay: 0.5s;
+}
+
+@keyframes loader{
+  0%{
+    transform: scale(0);
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+/*end of custom preloader*/
 
 .img0 {
   margin-top: 30%; width: 100%; position: absolute; bottom: 0; left: 0; z-index: 0; opacity: 0.3;

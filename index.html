@@ -116,22 +116,12 @@
       color: #fff;
       font-weight: bold;
       padding: 8px 30px;
+      margin-bottom: 20px;
     }
+
     .main-carousel .btn:hover {
       transform: scale(1.1);
       transition: ease-in-out .6s;
-    }
-
-    .carousel-img {
-      animation-name: carousel-img; animation-duration: 4s; animation-iteration-count: infinite;
-    }
-
-    @keyframes carousel-img {
-      0% {transform: translateY(0);}
-      40% {transform: translateY(-10px);}
-      //60% {transform: translateY(0);}
-      80% {transform: translateY(0);}  
-      100% {transform: translateY(0);}
     }
 
     .about {
@@ -215,15 +205,20 @@
       line-height: 30px;
     }
 
+    .bottom-svg {
+      margin-top: -120px;
+      padding: 0;
+    }
+
+    @media only screen and (max-width: 900px){
+      .bottom-svg {
+        margin-top: -10px;
+      }
+    }
+
     .details, .details a {
       color: #fff;
       line-height: 20px;
-    }
-
-    @media only screen and (max-width: 750px){
-      .hide-at-700px {
-        display: none;
-      }
     }
   </style>
 </head>
@@ -278,7 +273,7 @@
           <br>
           <!--<p class="animatable fadeInUp" style="color: #036;">We help you to achieve more by giving you salary loans with easy terms!</p>-->
           <br>
-          <div class="button-container animatable fadeInUp">
+          <div class="button-container text-center animatable fadeInUp">
             <a class="" id="contact-btn2" href="#contact"><button class="btn">Contact Me</button></a>
             <a class="" href="Resume.pdf" target="_blank"><button class="btn" style="margin-left: 30px; padding-left: 50px; padding-right: 50px;">Resume</button></a>
           </div>
@@ -443,7 +438,7 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid" style="margin-top: -120px; padding: 0; background: #fff;">
+  <div class="container-fluid bottom-svg" style="background: #fff;">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#99caff" fill-opacity="1" d="M0,256L48,245.3C96,235,192,213,288,213.3C384,213,480,235,576,250.7C672,267,768,277,864,282.7C960,288,1056,288,1152,266.7C1248,245,1344,203,1392,181.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
   </div>
   <div class="container-fluid contact" id="contact" style="min-height: 400px; background: #99caff; background: linear-gradient(#99caff, #1a88ff); color: #fff;">
@@ -528,11 +523,10 @@
         <br>
       </div>
     </div>
-  </div>
-  <div class="loader-wrapper">
-    <div class="loader"></div>  
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
+  </div> 
+  <div id="preloader">
+    <div class="loader" style="position: relative;">
+    </div>
   </div>
   <script src="appctrl.js"></script>
   <script src="main.js"></script>
